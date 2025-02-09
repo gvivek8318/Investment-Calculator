@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="Initial Investment">Initial Investment</label>
+    <input type="number" [(ngModel)]="Inital" name="Inital" placeholder="Initial Investment">
+
+    <label for="Annual Investment">Annual Investment</label>
+    <input type="number" [(ngModel)]="Annual" name="Annual" placeholder="Annual Investment">
+
+    <label for="Estimated Return"> Estimated Return</label>
+    <input type="number" [(ngModel)]="Return" name="Return" placeholder="Estimated Return">
+
+    <label for="Duration">Duration</label>
+    <input type="number" [(ngModel)]="Duration" name="Duration" placeholder="Duration">
+
+    <button type="submit">Submit</button>
+</form>
+

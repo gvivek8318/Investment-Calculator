@@ -1,0 +1,26 @@
+<div *ngIf="investmentData.length > 0">
+<table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Invested Value</th>
+            <th>Interest(Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of investmentData">
+            <td>{{data.year}}</td>
+            <td>{{data.valueEndOfYear | currency:'USD':true}}</td>
+            <td>{{data.interest | currency:'USD':true}}</td>
+            <td>{{data.totalInterest | currency:'USD':true}}</td>
+            <td>{{data.totalAmountInvested | currency:'USD':true}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div *ngIf="investmentData.length === 0">
+    <p>No data available</p>
+</div>
